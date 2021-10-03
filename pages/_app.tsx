@@ -12,6 +12,10 @@ import Carousel from '../Components/SharedComponents/Swiper';
 import GeneralInfo from '../Components/LandingPage/GeneralInfo';
 import FeaturedTures from '../Components/LandingPage/FeaturedTures';
 import Head from 'next/head'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -73,7 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     </section>
                     <section style={{ color: "green", fontWeight: 600, fontFamily: "sans-serif" }}>
                         <Checkbox checked={transport === "plane"} onChange={(e) => { if (e.target.checked) setTransport("plane") }} color="secondary" />
-                        <span style={{ marginRight: "1rem" }}>airplane b</span>
+                        <span style={{ marginRight: "1rem" }}>airplane</span>
                         <span style={{ width: "1rem" }}>
                             <FontAwesomeIcon size="xs" icon={ faPlane}/>
                         </span>
