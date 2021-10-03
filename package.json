@@ -1,0 +1,40 @@
+{
+  "name": "compass",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@mui/material": "^5.0.1",
+    "framer-motion": "^4.1.17",
+    "hamburger-react": "^2.4.1",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.32.1",
+    "react-render-counter": "^1.0.1",
+    "react-reveal": "^1.2.2",
+    "react-simple-maps": "^2.3.0",
+    "react-svg-tooltip": "0.0.11",
+    "react-world-countries-map": "^1.1.0",
+    "sass": "^1.42.1",
+    "swiper": "^7.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.24",
+    "@zeit/next-sass": "^1.0.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "4.4.3"
+  }
+}

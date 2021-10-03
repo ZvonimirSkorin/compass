@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/merienda/v9/gNMHW3x8Qoy5_mf8uWMFMIo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.FeaturedParent{
+    background-image: url('../public/SmokeBg.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.FeaturedTuresMain {
+    margin-top: 2rem;
+    display: grid;
+    box-sizing: border-box;
+    
+    @media screen and (min-width:1170px) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem;
+    }
+
+    @media screen and (max-width:1170px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+.h2{
+    font-family:Merienda;
+    text-align:center;
+    font-size:2rem;
+    margin-top:1rem;
+}
+
+.TourCardMain {
+    
+    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.73);
+    border-radius:1rem;
+    display:inline-block;
+    position:relative;
+
+}
+
+.TourCardWrapper{
+    width:100%;
+    box-sizing:border-box;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1rem;
+    @media screen and (min-width:700px){
+        padding:2rem;
+    }
+}
+
+
+.Picture{
+    border-radius:1rem;
+    display:block;
+}
+
+.NameHolder {
+    background: rgb(0,0,0);
+    border-bottom-left-radius:1rem;
+    border-bottom-right-radius:1rem;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7906512946975666) 0%, rgba(0,0,0,0.4265056364342612) 35%, rgba(0,0,0,0.0651610986191351) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    box-sizing:border-box;
+    padding:1rem;
+    font-family:sans-serif;
+    font-size:1.3rem;
+}
+.hoverDiv{
+    position:absolute;
+    left:0; right:0; top:0; bottom:0;
+    background-color:black;
+    border-radius:1rem;
+    opacity:0;
+    z-index:20;
+    display:flex;
+    color:white;
+    font-family:Merienda;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+}
