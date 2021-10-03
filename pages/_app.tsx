@@ -68,14 +68,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                         <span style={{ marginRight: "1rem" }}>bus</span>
 
                         <span style={{ width: "1rem" }}>
-                            <FontAwesomeIcon icon={faBus} />
+                            <FontAwesomeIcon size="xs" icon={faBus} />
                         </span>
                     </section>
                     <section style={{ color: "green", fontWeight: 600, fontFamily: "sans-serif" }}>
                         <Checkbox checked={transport === "plane"} onChange={(e) => { if (e.target.checked) setTransport("plane") }} color="secondary" />
                         <span style={{ marginRight: "1rem" }}>airplane</span>
                         <span style={{ width: "1rem" }}>
-                            <FontAwesomeIcon icon={ faPlane}/>
+                            <FontAwesomeIcon size="xs" icon={ faPlane}/>
                         </span>
                         </section>
 
