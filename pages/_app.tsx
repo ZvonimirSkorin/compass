@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     </section>
                     <section style={{ color: "green", fontWeight: 600, fontFamily: "sans-serif" }}>
                         <Checkbox checked={transport === "plane"} onChange={(e) => { if (e.target.checked) setTransport("plane") }} color="secondary" />
-                        <span style={{ marginRight: "1rem" }}>airplane</span>
+                        <span style={{ marginRight: "1rem" }}>airplane b</span>
                         <span style={{ width: "1rem" }}>
                             <FontAwesomeIcon size="xs" icon={ faPlane}/>
                         </span>
