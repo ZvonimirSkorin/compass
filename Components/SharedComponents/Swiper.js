@@ -71,26 +71,27 @@ export default function Carousel() {
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Switzerland", "", activeIndex===0)}
-                <Image src={compassV3} alt="Picture of the author"  />
+                <Image priority={true} src={compassV3} alt="Picture of the author"  />
             </SwiperSlide>
             
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Austria", "", activeIndex===1)}
-                <Image src={compassV1} alt="Picture of the author"  />
+                <Image priority={true} src={compassV1} alt="Picture of the author"  />
             </SwiperSlide>
-            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh", position: "relative"}} className={swiperSlide}>
+            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
-                {descriptionD("Poland", "", activeIndex===2)}
-                <Image src={compassV2} alt="Picture of the author"  />
+                {descriptionD("Switzerland", "", activeIndex===2)}
+                <Image priority={true} src={compassV3} alt="Picture of the author"  />
             </SwiperSlide>
-            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh", position: "relative" }} className={swiperSlide}>
+            
+            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
-                {descriptionD("Croatia", "", activeIndex===3)}
-                <Image src={compassV4} alt="Picture of the author"  />
+                {descriptionD("Austria", "", activeIndex===3)}
+                <Image priority={true} src={compassV1} alt="Picture of the author"  />
             </SwiperSlide>
             
                

@@ -9,6 +9,7 @@
     background-image: url('../public/SmokeBg.svg');
     background-size: cover;
     background-position: top;
+    padding-bottom: 3rem;
     background-repeat: no-repeat;
 }
 
@@ -44,24 +45,38 @@
     position:relative;
 
 }
+.TourCardMainAnimated {
+    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.73);
+    border-radius: 1rem;
+    display: inline-block;
+    position: relative;
+    height:300px;
+    height:400px;
+}
 
-.TourCardWrapper{
-    width:100%;
-    box-sizing:border-box;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:1rem;
-    @media screen and (min-width:700px){
-        padding:2rem;
+.TourCardWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    @media screen and (min-width:700px) {
+        padding: 1rem;
     }
 }
 
 
-.Picture{
-    border-radius:1rem;
-    display:block;
+.Picture {
+    border-radius: 1rem;
+    display: block;
+    height:100%;
+    width:100%;
+    max-width:400px;
+    object-fit:cover;
+
 }
 
 .NameHolder {
@@ -72,8 +87,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index:10;
     right: 0;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     color:white;
@@ -95,4 +112,22 @@
     justify-content:center;
     align-items:center;
     font-size:2rem;
+}
+.hoverDivAnim {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgb(196,15,97);
+    background: linear-gradient(0deg, rgba(196,15,97,1) -41%, rgba(0,0,0,0.8158613787311799) 0%, rgba(0,0,0,0.6393907904958859) 25%, rgba(0,0,0,0.465721322708771) 50%, rgba(0,0,0,0.22762608461353295) 75%, rgba(0,0,0,0.02874653279280459) 100%);
+    bottom: 0;
+    border-radius: 1rem;
+    opacity: 0;
+    z-index: 9;
+    height: 50%;
+    display: flex;
+    color: white;
+    font-family: Merienda;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }

@@ -1,0 +1,53 @@
+.ExploreWrapper{
+    width:100%;
+}
+
+.search_bar_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    padding: 5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 173, 238, 0.15);
+    background-image:url('../../public/search_back.jpg');
+    @media screen and (min-width:780px) {
+        padding: 5rem;
+    }
+}
+
+.ExploreSecondSection{
+    background-image:url('../../public/Mountain1.svg');
+    background-repeat:no-repeat;
+}
+
+.button {
+    margin-left: 1rem;
+    width: 8rem;
+    background-color: #00ADEE;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1rem;
+
+    @media screen and (max-width:780px) {
+        margin-top: 1rem;
+        box-sizing: border-box;
+    }
+}
+
+.span {
+    display: inherit;
+    justify-content:center;
+    align-items:center;
+    max-width:100%;
+    @media screen and (max-width:780px) {
+        flex-direction: column;
+    }
+}
+

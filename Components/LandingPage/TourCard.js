@@ -10,9 +10,11 @@ const TourCard = (props) => {
 
     return (
         <Flip left>
-            <div onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false)} } className={TourCardWrapper}>
+            <div onMouseEnter={() => {
+                if(props.disableHover==null)
+                setHover(true) }} onMouseLeave={() => { setHover(false)} } className={TourCardWrapper}>
             <div className={TourCardMain}>
-                <img width="100%" className={Picture} src={props.link} />
+                <img width="100%" style={props.disableHover?{height:"400px"}:{}} className={Picture} src={props.link} />
                     <div className={NameHolder}><b>{props.ime}</b></div>
                     <motion.div className={hoverDiv} animate={hover ? { opacity:1 } : {opacity:0}}>Explore</motion.div>
                 </div>

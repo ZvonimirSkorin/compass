@@ -1,0 +1,99 @@
+.logo {
+    animation: rotate 5s ease forwards ;
+}
+
+@keyframes rotate {
+    from{
+        transform:scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes anim {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill {
+    
+    to {
+        fill:none;
+    }
+}
+@keyframes fill_full {
+
+    from {
+        fill: none;
+        fill-opacity:0;
+    }
+    to {
+        fill: #0065A3;
+        fill-opacity: 1;
+    }
+}
+.KompasName {
+    fill: none;
+    stroke: #0065A3;
+    animation: fill_full 0.2s ease forwards 3s;
+}
+.mask{
+    fill:none;
+}
+ 
+.KompasName path:nth-child(2) {
+    stroke-dasharray: 788.1207275390625;
+    fill-opacity:1;
+    stroke-dashoffset: 788.1207275390625;
+    animation: anim 2s ease forwards;
+}
+
+
+.KompasName path:nth-child(3) {
+    stroke-dasharray: 677.4957885742188;
+    stroke-dashoffset: 677.4957885742188;
+  
+   
+    animation: anim 2s ease forwards 0.25s;
+}
+
+.KompasName path:nth-child(4) {
+    stroke-dasharray: 989.709716796875;
+    stroke-dashoffset: 989.709716796875;
+    animation: anim 2s ease forwards 0.5s;
+}
+.KompasName path:nth-child(5) {
+    stroke-dasharray: 877.4957885742188;
+    stroke-dashoffset: 877.4957885742188;
+    animation: anim 2s ease forwards 0.75s;
+}
+.KompasName path:nth-child(6) {
+    stroke-dasharray: 691.75341796875;
+    stroke-dashoffset: 691.75341796875;
+    animation: anim 2s ease forwards 1s;
+}
+.KompasName path:nth-child(7) {
+    stroke-dasharray: 788.1198120117188;
+    stroke-dashoffset: 788.1198120117188;
+    animation: anim 2s ease forwards 1.25s;
+}
+.KompasName path:nth-child(8) {
+    stroke-dasharray: 788.1198120117188;
+    stroke-dashoffset: 788.1198120117188;
+
+    animation: anim 2s ease forwards 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
