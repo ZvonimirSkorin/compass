@@ -9,16 +9,19 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import { useWindowSize, useWindowWidth } from '@react-hook/window-size';
 import {useEffect,useRef,useState} from 'react'
 import ScrollAdOns from '../Components/LandingPage/ScrollAdOns';
+import SmallNavBar from '../Components/SharedComponents/SmallNavBar';
+
 config.autoAddCss = false; /* eslint-disable import/first */
 
 
 function MyApp({ Component, pageProps }: AppProps) {
       const [initiate, setInitiate] = useState(false)
+      
     return (
         
            <body >
               
-       <div style={{height:"2rem",paddingLeft:"2rem",backgroundColor:"blue",color:"white"}}>Call us +43434343</div>
+              <SmallNavBar/> 
            <NavBar change_colors={initiate}/> 
             <Layout_ height={0}>
             <ScrollAdOns initiate={(val:boolean)=>{setInitiate(val)}}/>

@@ -52,7 +52,7 @@ const CountryMap: React.FC<any> = (props) => {
     return (
 
         <MapContainer center={[45.815153, 15.977581]}
-         style={{ height: "30rem", maxHeight:"70vh", width: "100%", borderRadius: "1rem" }} zoom={6} scrollWheelZoom={false} 
+         style={{ height: "30rem", maxHeight:"70vh", width: "100%", borderRadius: "1rem",zIndex:-1 }} zoom={6} scrollWheelZoom={false} 
          whenCreated={setMap}>
                        
 

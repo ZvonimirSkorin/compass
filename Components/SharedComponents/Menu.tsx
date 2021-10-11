@@ -21,7 +21,10 @@ const router = useRouter();
                     ["Home", "About", "explore", "Services", "Contact"].map((val, index) =>
                         <motion.p
                             key={index}
-                            onClick={() => {router.push(`/${val}`) }}
+                            onClick={() => {
+                                router.push(`/${val}`)
+                                props.close()
+                            }}
                             className={styles.MenuItem}
                             style={{ cursor: "pointer",color:"white",fontSize:"1.8rem" }} animate={{ x: ["-300%", "0%", "0%"], opacity: [0.4, 1] }}
                             transition={{ delay: 0.1 * (index--) }}

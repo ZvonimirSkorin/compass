@@ -6,13 +6,16 @@ import Image from 'next/image';
 import InitialGroup from '../Components/Explore/InitialGroup';
 import FeaturedTours from '../Components/Explore/FeaturedTours';
 import TravelGalery from '../Components/Explore/TravelGalery';
-
+import {useState, useRef} from 'react';
+import { useRouter } from 'next/dist/client/router';
 function Explore() {
-  
+    const selection = useRef('');
+    const router = useRouter();
+    const [getData, setGetData] = useState(0)
     return (
         <div className={styles.ExploreWrapper}>
             <Head>
-                <title>Create Next App</title>
+                <title>Kompas</title>
                 <meta name="description" content="Great european trips" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta content="Zvonimir Skorin" name="Author"/>
@@ -20,8 +23,11 @@ function Explore() {
             </Head>
             <section className={styles.search_bar_wrapper}>
                 <div className={styles.span}>
-                <SearchBar />
-                    <div className={styles.button}>Explore</div>
+                <SearchBar getData={getData} upadate_selection={(val:any)=>{selection.current=val}}/>
+                    <div onClick={()=>{
+                        setGetData(getData+1)}}
+            
+                     className={styles.button}>Explore</div>
                     </div>
             </section>
             <InitialGroup />

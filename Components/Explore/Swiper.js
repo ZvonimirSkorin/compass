@@ -31,7 +31,7 @@ import { useWindowWidth } from '@react-hook/window-size'
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 
-export default function SearchSwiper() {
+export default function SearchSwiper(props) {
     const onlyWidth = useWindowWidth()
     const [numoFslides, setNumOfSlides] = useState(4);
     useEffect(() => {
@@ -42,7 +42,38 @@ export default function SearchSwiper() {
         }
     }, [onlyWidth])
   
-    
+    if(props.Data)
+    return(
+        <Swiper navigation={true}
+            
+        autoplay={{
+        "delay": 3500,
+        "disableOnInteraction": true,
+        "stopOnLastSlide": true
+        }}
+        slidesPerView={numoFslides}
+        pagination={{
+            "clickable": true
+        }}
+        style={{ maxWidth: "1400px", zIndex:0 }}
+        className={mySwiper} onActiveIndexChange={(e) => { }} >
+
+        
+        {   props.Data?.map((val,index)=>
+            <SwiperSlide key={index} style={{ maxHeight: "90vh", display: "inline-block", backgroundColor: "transparent" }} className={swiperSlide}>
+            <AnimatedCard ime={val.Name} link="/compassV3.jpg" />
+        </SwiperSlide>
+        )
+            }
+      
+         
+      
+
+        
+
+
+    </Swiper>
+    );
 
     return (
 

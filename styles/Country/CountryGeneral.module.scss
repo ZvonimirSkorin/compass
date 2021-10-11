@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
+.CardParent{
+    width: 100%;
+}
+
+.a{
+    margin-top: 2rem;
+    color:white;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding:0.5rem 1.5rem;
+    
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgb(16, 25, 40);
+}
+
+
+.Strong{
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    box-sizing: border-box;
+    padding:1rem;
+    border-radius: 0.5rem;
+    font-family: Fira+Sans;
+    word-break: break-word;
+    box-shadow: 0px 0px 5px 0px #000000;
+    @media screen and (max-width:500px) {
+        margin:0 auto;
+        width:90%;
+        max-width: 400px;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    @media screen and (max-width:800px) {
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%) !important;
+        max-width: 400px;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    @media screen and (min-width:800px) {
+        top:50%;
+        left:10%;
+        padding:2rem;
+        transform: translateY(-50%);
+        max-width: 400px;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+   
+}
+
+.CountryMainImage{
+   width:100%;
+   height: 100%;
+   object-fit: cover;
+   
+}
+.CountryMainImageWrapper{
+    width:100%;
+    top:0;
+   
+    left:0;
+    position: absolute;
+    z-index: 100;
+    
+}
+.CountryMainImageHolder{
+    width:100%;
+    height: 100%;
+    position:relative;
+    
+}
+
+.bottom_curve{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+width:100%;
+margin-bottom: -0.4rem;
+object-fit: cover;
+}

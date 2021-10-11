@@ -86,7 +86,7 @@ font-family:'Poppins';
 	box-sizing:border-box;
 	padding-right:2rem;
 	align-items:center;
-	@media screen and (min-width: 1450px) {
+	@media screen and (min-width: 1180px) {
 		display: grid;
 		width: 50%;
 		grid-template-columns: 1fr 1fr;
@@ -117,7 +117,7 @@ font-family:'Poppins';
 	background-position: top;
 	background-repeat: no-repeat;
 
-	@media screen and (max-width:1000px) {
+	@media screen and (max-width:1180px) {
 		display: none;
 	}
 }
