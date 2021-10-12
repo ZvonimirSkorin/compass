@@ -15,7 +15,7 @@ const st = "Germany"
 
 
 export const getStaticPaths = async () =>{
-    const data =await fetch('http://localhost:3000/api/hello');
+    const data =await fetch('/api/hello');
     const countries = await data.json()
 
     const paths = countries.countries.map((val:any)=>({
@@ -32,7 +32,7 @@ export const getStaticPaths = async () =>{
 
     export const getStaticProps = async (context:any) =>{
         const id = context.params.country; 
-        const res = await fetch ("http://localhost:3000/api/country/"+id);
+        const res = await fetch ("/api/country/"+id);
          const data = await res.json()
          if (!data) {
             return {
