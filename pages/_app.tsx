@@ -20,10 +20,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         
            <body >
-              
               <SmallNavBar/> 
            <NavBar change_colors={initiate}/> 
             <Layout_ height={0}>
+               
             <ScrollAdOns initiate={(val:boolean)=>{setInitiate(val)}}/>
             <Component {...pageProps} />
 
