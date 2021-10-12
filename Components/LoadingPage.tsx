@@ -5,10 +5,10 @@ const LoadingPage: React.FC<{ stop: boolean }> = (props) => {
 
     return (
         <motion.div
-            style={{ backgroundColor:"white",zIndex:1000}}
+            style={{zIndex:100}}
             animate={props.stop ? { width: 52, backgroundColor: "", }
             : {
-                position: "fixed", top: 0, bottom: 0, left: 0, right: 0, backgroundColor: "white", zIndex: 1000
+                position: "fixed", top: 0, bottom: 0, left: 0, right: 0, zIndex: 1000
 }}>
             <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems:"center" }}>
                

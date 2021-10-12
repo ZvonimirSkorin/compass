@@ -11,7 +11,7 @@ import BigCard from "../../Components/Countires/BigCard";
 import FeaturedTours from "../../Components/Explore/FeaturedTours";
 import Flyer from "../../Components/Countires/Flyer";
 const st = "Germany"
-const api = "https://localhost:3000"
+const api = "https://jolly-swanson-73e23a.netlify.app"
 
 
 export const getStaticPaths = async () =>{

@@ -10,6 +10,7 @@ import { useWindowSize, useWindowWidth } from '@react-hook/window-size';
 import {useEffect,useRef,useState} from 'react'
 import ScrollAdOns from '../Components/LandingPage/ScrollAdOns';
 import SmallNavBar from '../Components/SharedComponents/SmallNavBar';
+import { BackgroundImg } from '../Components/SharedComponents/BackgroundImage';
 
 config.autoAddCss = false; /* eslint-disable import/first */
 
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         
            <body >
+              <BackgroundImg/>
               <SmallNavBar/> 
            <NavBar change_colors={initiate}/> 
             <Layout_ height={0}>
