@@ -3,7 +3,7 @@ import TitleImg from "../../Components/Toures/SmallComponents/TitleImg";
 import TourBigCard from "../../Components/Toures/TourBigCard";
 import styles from './../../styles/List/List.module.scss';
 
-const tour_list:React.FC = () =>{
+const Tour_list:React.FC = () =>{
     const [mainImgHeight, setMainImgHeight] = useState(0)
 
     return(
@@ -20,4 +20,4 @@ const tour_list:React.FC = () =>{
 }
 
 
-export default tour_list;
+export default Tour_list;
