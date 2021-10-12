@@ -39,7 +39,7 @@ const CitySwitch:React.FC<recivedProps> = (props) =>{
                        
                         {
                            lorem_array.map((val,index)=>
-                           <SwiperSlide style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+                           <SwiperSlide key={index} style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
                            <TourCard disableHover={true} ime={val.city} link={val.link}/>
                            </SwiperSlide>
                            )

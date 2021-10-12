@@ -4,7 +4,7 @@ import styles from './../../styles/Shared_styles/Swiper.module.scss';
 
 interface recivedProps {
     name:string,
-    data?: JSON | undefined | null,
+    data?: any,
     background_disable?:boolean | undefined | null
 }
 

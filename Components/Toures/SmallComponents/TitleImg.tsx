@@ -6,14 +6,16 @@ const TitleImg:React.FC<{link:string,height:Function}>= (props) =>{
     const size = useWindowSize();
     const ref = useRef<null | HTMLDivElement>(null)
     useEffect(()=>{
-        if(ref!==null){
-            props.height(ref.current?.getBoundingClientRect().height)
-        }
+        
+            if(ref!==null){
+                props.height(ref.current?.getBoundingClientRect().height)
+            }
+        
     },[size])
 
     return(
         <div ref={ref} className={styles.TitleImgWrapper}>
-            <img className={styles.TitleImg} src={props.link}/>
+            <img alt="kompas" className={styles.TitleImg} src={props.link}/>
         </div>
 
     );

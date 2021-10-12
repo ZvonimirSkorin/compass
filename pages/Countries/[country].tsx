@@ -1,4 +1,3 @@
-import { style } from "@mui/system";
 import { useWindowSize } from "@react-hook/window-size";
 import { useRouter } from "next/dist/client/router";
 import { useEffect } from "react";
@@ -10,50 +9,16 @@ import { motion } from "framer-motion";
 import BigCard from "../../Components/Countires/BigCard";
 import FeaturedTours from "../../Components/Explore/FeaturedTours";
 import Flyer from "../../Components/Countires/Flyer";
+import * as about from '../../public/Countries/Germany'
 const st = "Germany"
-const api = "https://jolly-swanson-73e23a.netlify.app"
-
-
-export const getStaticPaths = async () =>{
-    const data =await fetch(api+'/api/hello');
-    const countries = await data.json()
-
-    const paths = countries.countries.map((val:any)=>({
-        
-            params:{country:val.toString()}})
-     
-    )
-    return{
-        paths,
-        fallback: false
-
-    }
-}
-
-    export const getStaticProps = async (context:any) =>{
-        const id = context.params.country; 
-        const res = await fetch (api+"/api/country/"+id);
-         const data = await res.json()
-         if (!data) {
-            return {
-              redirect: {
-                destination: '/',
-                permanent: false,
-              },
-            }
-          }
-          return {
-              props:
-              {about:data}
-            }
-    }
+const api = "http://localhost:3000"
 
 
 
 
 
 
-const Country:React.FC<{country:string,about:any}> = (props) =>{
+const Country:React.FC<{country:string,}> = (props) =>{
 const size = useWindowSize();
 const [showBox, setShowBox] = useState(false)
 const router = useRouter();
@@ -72,18 +37,18 @@ useEffect(()=>{setTimeout(()=>{setShowBox(true)},1000)},[])
             <motion.article  animate={showBox?{opacity:1,x:["-10%","0%"]}:{}}  className={styles.Strong}>
             <div style={{color:"rgb(16, 25, 40)"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
            <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}> 
-            <strong onClick={()=>{router.push('/Toures/'+props.about.Name)}} className={styles.a}>Toures</strong></div>
+            <strong onClick={()=>{router.push('/Toures/'+about.Name)}} className={styles.a}>Toures</strong></div>
             </motion.article>
             </div>
            
             </section>
             <Flyer/>
-            <BigCard index={0} data={props.about}  side=""/>
-            <BigCard index={1} data={props.about}  side="Left"/>
-            <BigCard index={2} data={props.about}  side=""/>
-        <FeaturedTours background_disable={true} data={props.about.Cities} name={`Explore ${props.about.Name}`}/>
+            <BigCard index={0} data={about}  side=""/>
+            <BigCard index={1} data={about}  side="Left"/>
+            <BigCard index={2} data={about}  side=""/>
+        <FeaturedTours background_disable={true} data={about.Cities} name={`Explore ${about.Name}`}/>
             
-           <CountryGalery data={props.about.GaleryCircleImages} size={70}/>
+           <CountryGalery data={about.GaleryCircleImages} size={70}/>
            
         </div>
 
