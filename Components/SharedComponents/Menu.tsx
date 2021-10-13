@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { Drawer } from '@mui/material'
-import styles from '../../styles/NavBar.module.scss';
+import styles from '../../styles/NavBar/NavBar.module.scss';
 import { Router, useRouter } from 'next/dist/client/router';
 
 interface recivedProp {
@@ -18,11 +18,13 @@ const router = useRouter();
                 animate={{ justifyContent: "center", alignItems: "center" }}
                 className={styles.menu_itemsBox}>
                 {
-                    ["Home", "About", "explore", "Services", "Contact"].map((val, index) =>
+                    ["Home", "About", "Explore", "Services", "Contact"].map((val, index) =>
                         <motion.p
                             key={index}
                             onClick={() => {
+                                if(val!=="Home")
                                 router.push(`/${val}`)
+                                else router.push("/");
                                 props.close()
                             }}
                             className={styles.MenuItem}

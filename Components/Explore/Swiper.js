@@ -1,11 +1,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import Image from 'next/image'
-import compassV1 from '../../public/compassV1.jpg';
-import compassV2 from '../../public/compassV2.jpg';
-import compassV3 from '../../public/compassV3.jpg';
-import compassV4 from '../../public/compassV4.jpg';
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
-import { mySwiper, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText } from './../../styles/styles.module.scss'
+import { mySwiper2, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText } from './../../styles/styles.module.scss'
 
 
 // import Swiper core and required modules
@@ -56,7 +51,7 @@ export default function SearchSwiper(props) {
             "clickable": true
         }}
         style={{ maxWidth: "1400px", zIndex:0 }}
-        className={mySwiper} onActiveIndexChange={(e) => { }} >
+        className={mySwiper2} onActiveIndexChange={(e) => { }} >
 
         
         {   props.Data?.map((val,index)=>
@@ -89,7 +84,7 @@ export default function SearchSwiper(props) {
                 "clickable": true
             }}
             style={{ maxWidth: "1400px", zIndex:0 }}
-            className={mySwiper} onActiveIndexChange={(e) => { }} >
+            className={mySwiper2} onActiveIndexChange={(e) => { }} >
 
             
             <SwiperSlide style={{ maxHeight: "90vh", display: "inline-block", backgroundColor: "transparent" }} className={swiperSlide}>

@@ -1,10 +1,12 @@
 import LoadingPage from "./LoadingPage"
 import { useState, useEffect } from "react";
-import styles from './../styles/NavBar.module.scss';
+import styles from './../styles/NavBar/NavBar.module.scss';
 import { motion } from "framer-motion";
 import { Spin as Hamburger } from 'hamburger-react'
 import Menu from '../Components/SharedComponents/Menu'
 import { useRouter } from "next/dist/client/router";
+import { HorizontalMenu } from "./SharedComponents/HorizontalMenu";
+import {LanguageSelect} from "./SharedComponents/LanguageSelect";
 const NavBar:React.FC<any> = (props) => {
 
     const [toggle, setToggle] = useState(false)
@@ -27,14 +29,24 @@ const NavBar:React.FC<any> = (props) => {
             <LoadingPage stop={stop} />
             <motion.section
                 initial={false}
-                style={{cursor:"pointer"}}
+                style={{cursor:"pointer",display:"flex",alignItems:"center"}}
                 onClick={()=>router.push('/')}
-                animate={stop ? { opacity: 1 } : { opacity: 0 }}>Kompas</motion.section>
-
-            <section style={{ marginRight:"1%" }} className={styles.HamburgerWrapper}>
-                <Hamburger toggled={toggle} toggle={() => { setToggle(!toggle) }} color="#2e309b" />
-            </section>
-            <Menu open={toggle} close={() => { setToggle(false) }} />
+                animate={stop ? { opacity: 1 } : { opacity: 0 }}>
+                    Kompas
+                    
+                    </motion.section>
+                {
+                    stop?
+                        <>
+                        <HorizontalMenu/>
+                        <section style={{ marginRight:"1%" }} className={styles.HamburgerWrapper}>
+                            <Hamburger toggled={toggle} toggle={() => { setToggle(!toggle) }} color="#2e309b" />
+                        </section>
+                        <Menu open={toggle} close={() => { setToggle(false) }} /></>
+                    :
+                    <></>
+                }
+           
             </motion.div>
         );
 }

@@ -1,3 +1,5 @@
+import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useWindowSize } from "@react-hook/window-size"
 import { motion } from "framer-motion"
 import { useRouter } from "next/dist/client/router"
@@ -56,11 +58,20 @@ const ScrollAdOns : React.FC<{initiate:Function}> = (props) =>{
         })
      },[])
 
-     return(
+     return(<>
             <motion.div style={{height:"5px",backgroundColor:"white",position:"fixed",top:0,left:0,zIndex:1000,width:`${procentage!==NaN?procentage*100:100}%`}}>
                
             </motion.div>
-
+            <motion.div 
+            onClick={()=>{window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+              });}}
+                animate={procentage>0.2?{opacity:1,x:["10rem","0rem"]}:{}}
+            style={{opacity:0,borderRadius:"50%",backgroundColor:"white",zIndex:1000,display:"flex",position:"fixed",bottom:"5%",right:"5%",fontSize:"3.5rem",boxShadow:"0px 0px 15px 1px #000000"}}>
+                <FontAwesomeIcon  style={{}} color="#f93154" icon={faArrowCircleUp}/></motion.div>
+</>
      );
 }
 

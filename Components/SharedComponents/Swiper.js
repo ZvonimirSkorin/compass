@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
-import { mySwiper, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText } from './../../styles/styles.module.scss'
+import { mySwiper, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText,SwipPic } from './../../styles/styles.module.scss'
 
 
 // import Swiper core and required modules
@@ -31,10 +31,32 @@ import { motion } from "framer-motion";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 
-export default function Carousel() {
+export default function Carousel(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
+    let element = useRef(null)
     const { ref, inView, entry } = useInView();
+    useEffect(()=>{
+        let inter = setInterval(()=>{
+            const el = document.getElementById("SwiperMain")
+            if(el!==null) 
+        {props.set_height(el.getBoundingClientRect().height);
+            clearInterval(inter);
+        }
+        },100)
+            window.addEventListener('resize', ()=>{
+                let interV = setInterval(()=>{
+                    const el = document.getElementById("SwiperMain")
+                    if(el!==null) 
+                {props.set_height(el.getBoundingClientRect().height);
+                    clearInterval(interV);
+                }
+                },100)
+            })
+            
+       
+        
+    },[])
     const descriptionD = (title, text, active) => {
 
         return (
@@ -63,35 +85,35 @@ export default function Carousel() {
            pagination={{
                 "clickable": true
             }}
-            
+            id="SwiperMain"
             className={mySwiper} onActiveIndexChange={(e) => { setActiveIndex(e.activeIndex) }} style={{}}>
            
 
-            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
+            <SwiperSlide style={{ width: "100vw", maxHeight: "90vh", position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Switzerland", "", activeIndex===0)}
-                <Image priority={true} src={compassV3} alt="Picture of the author"  />
+                <img  className={SwipPic} src={"/compassV3.jpg"} alt="Picture of the author"  />
             </SwiperSlide>
             
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Austria", "", activeIndex===1)}
-                <Image priority={true} src={compassV1} alt="Picture of the author"  />
+                <img  className={SwipPic} src={"/compassV1.jpg"} alt="Picture of the author"  />
             </SwiperSlide>
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Switzerland", "", activeIndex===2)}
-                <Image priority={true} src={compassV3} alt="Picture of the author"  />
+                <img  className={SwipPic} src={"/compassV3.jpg"} alt="Picture of the author"  />
             </SwiperSlide>
             
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Austria", "", activeIndex===3)}
-                <Image priority={true} src={compassV1} alt="Picture of the author"  />
+                <img  className={SwipPic} src={"/compassV1.jpg"} alt="Picture of the author"  />
             </SwiperSlide>
             
                
@@ -99,6 +121,9 @@ export default function Carousel() {
        
     )
 
-    
+    function fck(){
+        
+        
+    }
 }
 

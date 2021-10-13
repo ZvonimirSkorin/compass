@@ -43,6 +43,9 @@ background-color: #303f9f;
     margin-top: auto;
     margin-bottom: auto;
     z-index: 100;
+    @media screen and (min-width:900px) {
+        display: none;
+    }
 }
 
 .MenuItem {

@@ -1,0 +1,16 @@
+.HorizontalMenu{
+    position: relative;
+    @media screen and (max-width:900px) {
+        display: none;
+    }
+    @media screen and (min-width:900px) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    margin-left: auto;
+    font-size: 1.2rem;
+    gap:1rem;
+    }
+    @media screen and (min-width:1200px) {
+        font-size: 1.5rem;
+    }
+}

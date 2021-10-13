@@ -6,6 +6,7 @@ import {
     Geography
 } from "react-simple-maps";
 import { useEffect } from "react";
+import { useRouter } from "next/dist/client/router";
 
 const geoUrl =
 "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -24,6 +25,7 @@ const rounded = num => {
 };
 
 const MapChart = ({ setTooltipContent, Transport, Price,Country }) => {
+    const router = useRouter();
     useEffect(() => {
         countries.set("Croatia", [{ city: "Zadar", price: 1000, transport: "plane" }, {city:"Opatija",price: 1000, transport: "bus" }])
         countries.set("Germany", [{ city: "Berlin", price: 1000, transport: "bus" }])
@@ -50,11 +52,14 @@ const MapChart = ({ setTooltipContent, Transport, Price,Country }) => {
                                     geography={geo}
                                     onMouseEnter={() => {
                                         const { NAME, POP_EST } = geo.properties;
-                                        setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                                        setTooltipContent(`${NAME} ï¿½ ${rounded(POP_EST)}`);
                                     }}
                                     onMouseLeave={() => {
                                         setTooltipContent("");
                                     }}
+                                    onClick={()=>{
+                                        const {NAME, POP_EST} = geo.properties;
+                                        router.push(`/Toures/${NAME}`)}}
                                     style={{
                                         default: {
                                             fill: `${test(geo.properties.NAME)? "blue" : "#D6D6DA"

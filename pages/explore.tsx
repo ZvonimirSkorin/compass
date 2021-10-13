@@ -6,14 +6,26 @@ import Image from 'next/image';
 import InitialGroup from '../Components/Explore/InitialGroup';
 import FeaturedTours from '../Components/Explore/FeaturedTours';
 import TravelGalery from '../Components/Explore/TravelGalery';
-import {useState, useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import { useRouter } from 'next/dist/client/router';
+import { motion } from 'framer-motion';
 function Explore() {
     const selection = useRef('');
     const router = useRouter();
     const [getData, setGetData] = useState(0)
+
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoaded(true);
+        },500)
+    })
     return (
-        <div className={styles.ExploreWrapper}>
+        <motion.div 
+        animate={loaded?{opacity:1}:{}}
+        style={{opacity:0}}
+        className={styles.ExploreWrapper}>
             <Head>
                 <title>Kompas</title>
                 <meta name="description" content="Great european trips" />
@@ -36,7 +48,7 @@ function Explore() {
                 <TravelGalery />
 
             </section>
-        </div>
+        </motion.div>
 
     );
 }
