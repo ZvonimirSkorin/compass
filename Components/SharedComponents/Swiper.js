@@ -87,7 +87,7 @@ export default function Carousel(props) {
                 "clickable": true
             }}
             id="SwiperMain"
-            className={mySwiper}  onActiveIndexChange={(e) => { setActiveIndex(e.activeIndex) }} style={{}}>
+            className={mySwiper}   onActiveIndexChange={(e) => { setActiveIndex(e.activeIndex) }} style={{}}>
            
 
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh", position: "relative" }} className={swiperSlide}>
