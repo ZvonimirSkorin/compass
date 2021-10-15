@@ -25,9 +25,12 @@ const EmailForm:React.FC<{Title?:string}> = (props) =>{
         
         emailjs.sendForm('service_kl76hb7', 'template_ih9p8nq', form.current, 'user_0rBTPAyjgh8e6beyxKstc')
           .then((result:any) => {
-              console.log(result.text);
+               if(result.text==="OK"){
+                  alert("Email is sent")
+                  form.current.reset();
+              }
           }, (error:any) => {
-              console.log(error.text);
+             alert("Something went wrong, try again")
           });
       };
     return(

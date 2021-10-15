@@ -18,19 +18,19 @@ const router = useRouter()
     
                            
                                                            
-<ul style={width<800?{fontSize:"0.7rem",display:"flex",alignItems:"center",justifyContent:"start",marginLeft:"-1rem",listStyleType:"none"}:{display:"flex",alignItems:"center",listStyleType:"none"}} className="quick-nav">
-                                        
-        <li  style={width<800?{marginLeft:"0rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
-        <a href="tel:123-456-7890"><FontAwesomeIcon icon={faPhone}/><i className="fas fa-phone"></i>&nbsp;
-        {width>800?"+420 234 090 170":""}</a></li>
-        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem" }:{marginLeft:"1rem"}} className="quick-nav__item">
+<ul style={width<800?{fontSize:"0.7rem",display:"flex",alignItems:"center",justifyContent:"start",marginLeft:"-1rem",listStyleType:"none"}:{display:"flex",alignItems:"center",listStyleType:"none"}} >
+                   <a style={{backgroundColor:"black"}}></a>                     
+        <li  style={width<800?{marginLeft:"0rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} >
+        <a href="tel: +496170961709"><FontAwesomeIcon icon={faPhone}/><i className="fas fa-phone"></i>
+       {width>800?"+420 234 090 170":""}</a></li>
+        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem" }:{marginLeft:"1rem"}} >
        <a href = "mailto: skorinzvonimir0@gmail.com">
-        <FontAwesomeIcon  icon={faEnvelopeOpen}/>&nbsp;<a  >
+        <FontAwesomeIcon  icon={faEnvelopeOpen}/>
         {width>800?
-        "kompas@kompas.cz":""}</a></a></li>
-        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
+        "kompas@kompas.cz":""}</a></li>
+        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} >
             <a href="https://www.facebook.com/turisticnaagencijaKOMPAS/"><FontAwesomeIcon icon={faFacebook}/></a></li>
-        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
+        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} >
         <a href="https://www.instagram.com/explore/locations/1353434504727949/slovenia/ljubljana-slovenia/turisticna-agencija-kompas/?hl=hr"><FontAwesomeIcon icon={faInstagram}/></a></li>                  
                           </ul>
                           <section style={{marginLeft:"auto",marginRight:"0.4rem",display:"flex",alignItems:"center"}}>

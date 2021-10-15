@@ -33,7 +33,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       
     return (
      
-           <body >
+           <div >
+              <head>
+              <meta name="format-detection" content="telephone=yes"/>
+              </head>
               <BackgroundImg/>
               <SmallNavBar/> 
            <NavBar change_colors={initiate}/> 
@@ -51,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </motion.span>
             }
            
-            </body>
+            </div>
            
     );
 }

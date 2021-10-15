@@ -10,7 +10,7 @@ const YourStoryText: React.FC<any> = (props) => {
                 {props.title}</h2>
             <motion.a
                 animate={props.fireUp ? { opacity: [0, 1] } : { height: 0, opacity: [0, 0] }}
-                style={{ display: "block", boxSizing: "border-box", padding: "1rem", backgroundColor: "#5EA73C", margin: "1rem", wordBreak: "break-word" }}>
+                style={{ display: "inline-block", boxSizing: "border-box", padding: "1rem", backgroundColor: "#5EA73C", margin: "1rem", wordBreak: "break-word" }}>
                 {props.description}
                         </motion.a>
         </div>
