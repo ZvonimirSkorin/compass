@@ -1,11 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup,Polyline } from 'react-leaflet';
 import { useEffect, useState, Fragment, useRef } from 'react';
-import Image from 'next/image'
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 import L, { Icon, LatLngExpression } from 'leaflet';
-import logo from '../../public/compassV1.jpg'
 
 
 
@@ -13,7 +11,6 @@ import logo from '../../public/compassV1.jpg'
 const CountryMap: React.FC<any> = (props) => {
 
     function get_icon(num: number) {
-     
         const iconPerson = new L.Icon({
             iconUrl: '/KompasLogo.svg',
             iconRetinaUrl: '/KompasLogo.svg',
@@ -51,8 +48,9 @@ const CountryMap: React.FC<any> = (props) => {
 
     return (
 
-        <MapContainer center={[45.815153, 15.977581]}
-         style={{ height: "30rem", maxHeight:"70vh", width: "100%", borderRadius: "1rem",zIndex:-1 }} zoom={6} scrollWheelZoom={false} 
+        <MapContainer center={props.koordinate!==undefined?[props.koordinate[0].lat, props.koordinate[0].lng]:[45.815153, 15.977581]}
+         style={{ height: "30rem", maxHeight:"70vh", width: "100%", borderRadius: "1rem",
+         zIndex:props.zIndex?1:-1 }} zoom={6} scrollWheelZoom={false} 
          whenCreated={setMap}>
                        
 
@@ -63,7 +61,7 @@ const CountryMap: React.FC<any> = (props) => {
             />
             <Polyline pathOptions={{ color: "green" }} positions={kruz} />
             {
-                koordinate?.map((val: any, index: number) =>
+                (props.koordinate!=null?props.koordinate:koordinate)?.map((val: any, index: number) =>
                     <Marker  icon={props.open === val.city ? get_icon(70) : get_icon(30)} key={index} position={[val.lat,val.lng]}>
                         <Popup  key={index} >
                             <div style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center",  }}>

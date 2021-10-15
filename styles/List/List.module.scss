@@ -1,3 +1,80 @@
-.ListParent{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.TitleType{
+    font-family: Poppins;
+    font-size: 1.5rem;
+    @media screen and (min-width:600px) {
+        font-size: 2rem;
+
+    }
+    @media screen and (min-width:800px) {
+        font-size: 2.5rem;
+
+    }
+    @media screen and (min-width:1000px) {
+        font-size: 3rem;
+
+    }
+    @media screen and (min-width:1300px) {
+        font-size:3.5rem;
+
+    }
+}
+
+.SecondBody{
+    @media screen and (min-width:600px) {
+        padding-top: 2rem;
+
+    }
+    @media screen and (min-width:800px) {
+        padding-top: 2.5rem;
+
+    }
+    @media screen and (min-width:1000px) {
+        padding-top:2rem;
+
+    }
+    @media screen and (min-width:1300px) {
+        padding-top:3rem;
+
+    }
+}
+
+.TouresSection1Title{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.TouresCards{
+    width:100%;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin:0 auto;
+    
+    @media screen and (min-width:600px) {
+        display: grid;
+        margin-top: 4rem;
+        gap:3px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width:900px) {
+        display: grid;
+        margin-top: 4rem;
+        gap:3px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width:1200px) {
+        display: grid;
+        margin-top: 4rem;
+        gap:3px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.recSec{
+    margin-left: 1rem;
+    margin-top: 3rem;
     
 }

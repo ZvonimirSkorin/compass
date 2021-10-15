@@ -9,10 +9,13 @@ import GeneralInfo from '../Components/LandingPage/GeneralInfo';
 import FeaturedTures from '../Components/LandingPage/FeaturedTures';
 import Head from 'next/head'
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import styles from '../styles/index.module.scss';
 // Prevent fontawesome from adding its CSS since we did it manually above:
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import LetTheNumbersSpeak from '../Components/LandingPage/LetTheNumbersSpeak';
+
 config.autoAddCss = false; /* eslint-disable import/first */
 
 const Home: NextPage = () => {
@@ -47,11 +50,17 @@ const Home: NextPage = () => {
             
            
                 <GeneralInfo />
-            
+                <section className={styles.LetTheNumbers} style={{minHeight:"400px",margin:"3rem 0rem"}}>
+             
+             <LetTheNumbersSpeak/>
+
+         </section>
             <section>
                
                 <FeaturedTures />
             </section>
+
+           
             <div className="FilterMain">
 
                 <section className="FilterTitle"><h1>Explore the world with compass</h1></section>

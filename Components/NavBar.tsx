@@ -13,16 +13,20 @@ const NavBar:React.FC<any> = (props) => {
     const [stop, setStop] = useState(false);
     const router = useRouter();
     useEffect(() => {
+        
+        if(router.pathname==="/"){
         const inter = setInterval(() => {
             setStop(true);
             clearInterval(inter);
-        }, 3800)
+        }, 3800)}
+        else setStop(true)
     }, [])
 
     return (
         <motion.div
         style={{zIndex:1000}}
-        animate={props.change_colors?{backgroundColor:"#0d47a1",color:"white",background:""}:{
+        initial={false}
+        animate={props.change_colors?{backgroundColor:"#0d47a1",color:"white"}:{
             backgroundColor:"rgba(255,255,255,0.3)",color:"black"}}
            className={styles.NavBarMain}>
 

@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState, useRef } from "react";
 import styles from './../../styles/Country/BigCard.module.scss';
 import { useWindowWidth } from "@react-hook/window-size";
+import { useRouter } from "next/dist/client/router";
 
 
 
@@ -10,6 +11,7 @@ const TourBigCard:React.FC = (props) =>{
     const {ref, inView} = useInView()
     const width = useWindowWidth();
     const [change_tracker, setChange] = useState(false);
+    const router = useRouter();
     
     useEffect(()=>{
       
@@ -38,7 +40,11 @@ const TourBigCard:React.FC = (props) =>{
                
                 </section>
                 <section  className={styles.BigCardSec2}>
-                    ksjfnksjd
+                    <h1 style={{color:"#1a237e"}}>Dresden</h1>
+                    <article>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu ligula vel ex egestas ornare. Integer porta elit sed pharetra efficitur. Maecenas nec vehicula dui. Nulla vel laoreet urna, quis placerat erat. Sed auctor dignissim nulla vel fringilla. In tristique lorem nulla, ac egestas augue tempus eu. Duis porta elit id magna dignissim consequat.
+                    </article>
+                    <a onClick={()=>{router.push('/Tour/Dresden')}} className={styles.Button}>Details</a>
                     </section>
         </motion.div>
     );

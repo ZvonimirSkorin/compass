@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.input, .select, .textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  .textarea{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+  }
+  .input {
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 3rem;
+    background-color: #81d4fa;
+  }
+
+
+  .FormParent{
+      max-width: 1400px;
+      margin:0 auto;
+      padding-top: 6rem;
+      padding-bottom: 5rem;
+      @media screen and (min-width:1000px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:2rem;
+      }
+  }
+
+
+  .YouHaveA{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    padding-bottom: 1rem;
+    display: inline-block;
+    margin:0 auto;
+    border-bottom-style: solid;
+
+    @media screen and (min-width:600px) {
+      font-size: 2rem;
+
+  }
+  @media screen and (min-width:800px) {
+      font-size: 2.5rem;
+
+  }
+  @media screen and (min-width:1000px) {
+      font-size: 3rem;
+
+  }
+  @media screen and (min-width:1300px) {
+      font-size:3.5rem;
+
+  }
+  }

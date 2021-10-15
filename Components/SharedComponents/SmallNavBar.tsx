@@ -13,21 +13,21 @@ const router = useRouter()
     return(
         <div 
         className="smallNavBar" style={
-          router.pathname.split('/')[1]==='Countries'?{display:"none"}:
+            ["Countries", "Tour"].find(el=>el===router.pathname.split('/')[1])?{display:"none"}:
           {paddingLeft:"1rem",backgroundColor:"blue",color:"white",height:"3.6rem"}}>
     
                            
                                                            
 <ul style={width<800?{fontSize:"0.7rem",display:"flex",alignItems:"center",justifyContent:"start",marginLeft:"-1rem",listStyleType:"none"}:{display:"flex",alignItems:"center",listStyleType:"none"}} className="quick-nav">
                                         
-        <li style={width<800?{marginLeft:"0rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
-        <FontAwesomeIcon icon={faPhone}/><a href="tel:123-456-7890"><i className="fas fa-phone"></i>&nbsp;
+        <li  style={width<800?{marginLeft:"0rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
+        <a href="tel:123-456-7890"><FontAwesomeIcon icon={faPhone}/><i className="fas fa-phone"></i>&nbsp;
         {width>800?"+420 234 090 170":""}</a></li>
-        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem" }:{marginLeft:"1rem"}} className="quick-nav__item"
-       
-        ><FontAwesomeIcon  icon={faEnvelopeOpen}/>&nbsp;<a  href = "mailto: skorinzvonimir0@gmail.com">
+        <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem" }:{marginLeft:"1rem"}} className="quick-nav__item">
+       <a href = "mailto: skorinzvonimir0@gmail.com">
+        <FontAwesomeIcon  icon={faEnvelopeOpen}/>&nbsp;<a  >
         {width>800?
-        "kompas@kompas.cz":""}</a></li>
+        "kompas@kompas.cz":""}</a></a></li>
         <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">
             <a href="https://www.facebook.com/turisticnaagencijaKOMPAS/"><FontAwesomeIcon icon={faFacebook}/></a></li>
         <li style={width<800?{marginLeft:"0.7rem",fontSize:"1.5rem"}:{marginLeft:"1rem"}} className="quick-nav__item">

@@ -14,7 +14,7 @@ const TitleImg:React.FC<{link:string,height:Function}>= (props) =>{
     },[size])
 
     return(
-        <div ref={ref} className={styles.TitleImgWrapper}>
+        <div ref={ref} style={{position:"fixed"}} className={styles.TitleImgWrapper}>
             <img alt="kompas" className={styles.TitleImg} src={props.link}/>
         </div>
 

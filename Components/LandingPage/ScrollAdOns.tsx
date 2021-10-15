@@ -68,11 +68,12 @@ const ScrollAdOns : React.FC<{initiate:Function}> = (props) =>{
                 left: 0,
                 behavior: 'smooth'
               });}}
-                animate={procentage>0.2?{opacity:1,x:["10rem","0rem"]}:{}}
+                animate={procentage>0.3?{opacity:1,x:["10rem","0rem"]}:{}}
             style={{opacity:0,borderRadius:"50%",backgroundColor:"white",zIndex:1000,display:"flex",position:"fixed",bottom:"5%",right:"5%",fontSize:"3.5rem",boxShadow:"0px 0px 15px 1px #000000"}}>
                 <FontAwesomeIcon  style={{}} color="#f93154" icon={faArrowCircleUp}/></motion.div>
 </>
      );
+     
 }
 
 export default ScrollAdOns;

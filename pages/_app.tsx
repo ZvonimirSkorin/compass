@@ -10,28 +10,48 @@ import { useWindowSize, useWindowWidth } from '@react-hook/window-size';
 import {useEffect,useRef,useState} from 'react'
 import ScrollAdOns from '../Components/LandingPage/ScrollAdOns';
 import SmallNavBar from '../Components/SharedComponents/SmallNavBar';
-import { BackgroundImg } from '../Components/SharedComponents/BackgroundImage';
+import  BackgroundImg  from '../Components/SharedComponents/BackgroundImage';
+import { useRouter } from 'next/dist/client/router';
+import { motion } from 'framer-motion';
 
 config.autoAddCss = false; /* eslint-disable import/first */
 
 
 function MyApp({ Component, pageProps }: AppProps) {
       const [initiate, setInitiate] = useState(false)
+      const [fade, setFade] = useState(false)
+      const router = useRouter()
+      useEffect(()=>{
+         if(router.pathname==="/"){
+            setTimeout(()=>{
+               setFade(true)
+            },2800)
+         }
+         else setFade(true)
+      },[])
       
     return (
-        
+     
            <body >
               <BackgroundImg/>
               <SmallNavBar/> 
            <NavBar change_colors={initiate}/> 
+              {
+                 !fade?
+                    <div>bok</div>
+                 :
+            <motion.span style={{opacity:0}} animate={{opacity:1}}>
             <Layout_ height={0}>
                
             <ScrollAdOns initiate={(val:boolean)=>{setInitiate(val)}}/>
             <Component {...pageProps} />
 
             </Layout_>
+            </motion.span>
+            }
+           
             </body>
-      
+           
     );
 }
 export default MyApp
