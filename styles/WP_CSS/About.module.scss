@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import '../kompas_colors.scss';
+.AboutSec1{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $dark_blue;
+    font-family: Source Sans Pro;
+    
+}
+
+.AboutLogo{
+    width:200px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.Title1{
+    margin-top: 0;
+    font-weight: 900;
+    font-size:2.7rem;
+}
+
+.FirstBox{
+    width:480px;
+    margin:0 auto;
+    max-width: 90%;
+    @media screen and (min-width:600px) {
+        font-size: 1.7rem;
+    }
+}
+
+.SecondSectionWrapper{
+    background-color: $dark_blue;
+    padding:3rem 1.5rem;
+    margin-top: 3rem;
+}
+
+.Box{
+    background-color: white;
+    margin-top: 1rem;
+    border-style: solid;
+    border-color: #c9da2a;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    border-radius: 1rem;
+    display:flex;
+    flex-direction: column;
+    @media screen and (min-width:800px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.BoxInner{
+    width:100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $dark_blue;
+    box-sizing: border-box;
+    padding:1rem;
+
+    @media screen and (min-width:800px) {
+        align-items: center;
+        min-height: 400px;
+
+    }
+
+}
+
+.HBox2{
+    font-weight: 900;
+    font-size:3rem;
+    position: relative;
+    font-family: Source Sans Pro;
+    margin-bottom: 1rem;
+    @media screen and (max-width:800px) {
+        
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    
+    }
+    @media screen and (min-width:800px) {
+        margin-right: auto;
+    
+    
+    }
+
+}
+
+.ADDON{
+    width:40px;
+    height: 6px;
+    border-radius: 1rem;
+    background-color: #c9da2a;
+    position: absolute;
+    left:0;
+    bottom:0;
+    @media screen and (max-width:800px) {
+        left:0  !important;
+    
+    
+    }
+}
+
+.BoxText{
+font-size: 1.2rem;
+max-width: 400px;
+margin:0 auto;
+@media screen and (max-width:800px) {
+    margin:0 auto !important;
+
+
+}
+@media screen and (min-width:800px) {
+    margin-right: auto;
+    margin-left: 0;
+
+
+}
+}

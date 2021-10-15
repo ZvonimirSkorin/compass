@@ -15,7 +15,8 @@ import "swiper/css";
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
-import { mySwiper, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText,SwipPic } from './../../styles/styles.module.scss'
+import { mySwiper, swiperSlide, swiperSlideSideBoxL, swiperSlideSideBoxR, description, h1, descriptionText,SwipPic } 
+from './../../styles/styles.module.scss'
 
 
 // import Swiper core and required modules
@@ -86,7 +87,7 @@ export default function Carousel(props) {
                 "clickable": true
             }}
             id="SwiperMain"
-            className={mySwiper} onActiveIndexChange={(e) => { setActiveIndex(e.activeIndex) }} style={{}}>
+            className={mySwiper}  onActiveIndexChange={(e) => { setActiveIndex(e.activeIndex) }} style={{}}>
            
 
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh", position: "relative" }} className={swiperSlide}>

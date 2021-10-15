@@ -14,6 +14,7 @@ import  BackgroundImg  from '../Components/SharedComponents/BackgroundImage';
 import { useRouter } from 'next/dist/client/router';
 import { motion } from 'framer-motion';
 
+
 config.autoAddCss = false; /* eslint-disable import/first */
 
 
