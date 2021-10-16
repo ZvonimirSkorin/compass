@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import styles from '../../styles/Shared_styles/EmailForm.module.scss';
 import emailjs from 'emailjs-com';
-import { AnyPointerEvent } from 'framer-motion/types/gestures/PanSession';
 
 
 const EmailForm:React.FC<{Title?:string}> = (props) =>{
@@ -34,10 +33,10 @@ const EmailForm:React.FC<{Title?:string}> = (props) =>{
           });
       };
     return(
-        <div className={styles.FormParent} style={{zIndex:10}}>
-<h2 className={styles.YouHaveA}>You have a question?</h2>
+        <div className={styles.FormParent} style={{zIndex:10,boxSizing:"border-box",padding:"1rem 1rem"}}>
+<h2 style={{margin:"0 auto"}} className={styles.YouHaveA}>You have a question?</h2>
 
-<div className={styles.container}>
+<div style={{maxWidth:"90vw",margin:"1rem auto"}} className={styles.container}>
     <form onSubmit={sendEmail} ref={form}>
 
     <label >Name</label>
@@ -59,8 +58,8 @@ const EmailForm:React.FC<{Title?:string}> = (props) =>{
             </span>
   </form>
 </div>
-<div style={{width:"100%",height:"100%",display:"flex",justifyContent:"center",flexDirection:"column",alignItems:"center"}}>
-<Map open={"Rotterdam"} zIndex={true} koordinate={[{city:"Rotterdam",lat:51.925786, lng:4.379585} , 
+<div style={{margin:"0 auto",boxSizing:"border-box",paddingTop:"1rem",width:"100%",height:"100%",display:"flex",maxWidth:"90vw",justifyContent:"center",flexDirection:"column",alignItems:"center"}}>
+<Map ZoomIn={11} open={"Rotterdam"} zIndex={true} koordinate={[{city:"Rotterdam",lat:51.925786, lng:4.379585} , 
 ]} />
 <article style={{marginTop:"1rem"}}>
     <h3>Kompas agency d.o.o</h3>

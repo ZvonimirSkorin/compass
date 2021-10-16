@@ -14,3 +14,9 @@
         font-size: 1.5rem;
     }
 }
+
+.ItemHorizontal{
+    &:hover{
+        color:red;
+    }
+}

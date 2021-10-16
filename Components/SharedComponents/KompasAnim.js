@@ -12,6 +12,7 @@ const KompasAnim = (props) => {
     }, [])*/
     return (
         <motion.svg
+        style={{zIndex:1}}
         animate={{scale:[0,1]}}
         transition={{duration:2.5}}
          id="logo" width="167"  viewBox="0 0 167 163" fill="none" xmlns="http://www.w3.org/2000/svg">

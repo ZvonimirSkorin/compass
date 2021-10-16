@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import '../kompas_colors.scss';
+
+
+
+.blueArea{
+    display: grid;
+    max-width: 800px;
+    margin:0 auto;
+    gap: 1rem;
+    @media screen and (min-width:800px) {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+.BlueBox{
+    min-height: 400px;
+    box-sizing: border-box;
+    padding:1rem 0rem;
+    background-color: white;
+    margin-top: 1rem;
+    border-style: solid;
+    border-color: #c9da2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 5px;
+    border-radius: 1rem;
+}
+
+.BlueImg{
+    width:300px;
+    max-width: 90%;
+    border-style: solid;
+    border-color: #c9da2a;
+  
+    border-width: 1.5px;
+    border-radius: 1rem;
+    
+}
+
+.BoxHeader{
+    color: $dark_blue;
+    font-family: Source Sans Pro;
+    font-size: 1.5rem;
+    margin:0;
+    margin-top: 1rem;
+    font-weight: 800;
+}
+
+
+.BoxText{
+    box-sizing: border-box;
+    padding:1rem 2rem;
+    text-align: center;
+    color: $dark_blue;
+    font-family: Source Sans Pro;
+    font-size: 1.2rem;
+}
+
+.BlueButton{
+    color: $dark_blue;
+    background-color: #c9da2a;
+    padding:1rem;
+    width:200px;
+    font-family: Source Sans Pro;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+
+}
+
+
+
+

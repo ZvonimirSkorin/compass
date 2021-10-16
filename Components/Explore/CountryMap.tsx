@@ -10,13 +10,13 @@ import L, { Icon, LatLngExpression } from 'leaflet';
 
 const CountryMap: React.FC<any> = (props) => {
 
-    function get_icon(num: number) {
+    function get_icon(num: number, num2:number) {
         const iconPerson = new L.Icon({
-            iconUrl: '/KompasLogo.svg',
-            iconRetinaUrl: '/KompasLogo.svg',
+            iconUrl: "/marker-icon.png",
+            iconRetinaUrl: '/marker-icon-2x.png',
             
 
-            iconSize: new L.Point(num, num),
+            iconSize: new L.Point(num, num2),
             className: 'leaflet-div-icon2'
         });
         return iconPerson;
@@ -50,7 +50,7 @@ const CountryMap: React.FC<any> = (props) => {
 
         <MapContainer center={props.koordinate!==undefined?[props.koordinate[0].lat, props.koordinate[0].lng]:[45.815153, 15.977581]}
          style={{ height: "30rem", maxHeight:"70vh", width: "100%", borderRadius: "1rem",
-         zIndex:props.zIndex?1:-1 }} zoom={6} scrollWheelZoom={false} 
+         zIndex:props.zIndex?1:-1 }} zoom={props.ZoomIn?props.ZoomIn:6} scrollWheelZoom={false} 
          whenCreated={setMap}>
                        
 
@@ -62,7 +62,7 @@ const CountryMap: React.FC<any> = (props) => {
             <Polyline pathOptions={{ color: "green" }} positions={kruz} />
             {
                 (props.koordinate!=null?props.koordinate:koordinate)?.map((val: any, index: number) =>
-                    <Marker  icon={props.open === val.city ? get_icon(70) : get_icon(30)} key={index} position={[val.lat,val.lng]}>
+                    <Marker key={index} position={[val.lat,val.lng]}>
                         <Popup  key={index} >
                             <div style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center",  }}>
                                 

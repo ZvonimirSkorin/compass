@@ -1,4 +1,3 @@
-import { style } from '@mui/system';
 import styles from '../styles/WP_CSS/About.module.scss';
 
 const About:React.FC = () =>{

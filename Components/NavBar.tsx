@@ -30,7 +30,7 @@ const NavBar:React.FC<any> = (props) => {
             backgroundColor:"rgba(255,255,255,0.3)",color:"black"}}
            className={styles.NavBarMain}>
 
-            <LoadingPage stop={stop} />
+            <LoadingPage stop={true} />
             <motion.section
                 initial={false}
                 style={{cursor:"pointer",display:"flex",alignItems:"center"}}

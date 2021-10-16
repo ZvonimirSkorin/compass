@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.Footer{
+    width:100%;
+    position: relative; 
+    padding-top: 200px;  
+}
+
+.MainContainer{
+    border-style: solid;
+    border-width: 1px;    
+    width:100%;
+    padding-top: 100px;
+    color:white !important;
+    color:blue;
+    background-image: url('../../public/Shiny.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.FooterTop{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,0);
+    width:700px;
+    max-width: 90%;
+    height:200px;
+    margin-top: 100px;
+    border-radius: 1rem;
+    background-color: #ffff00;
+    
+    display: flex;
+    align-items: center;
+     box-sizing: border-box;
+     padding:1rem;
+     color:black !important;
+     box-shadow: 0px 0px 3px 0px #000000;
+     font-family: Sans Serif pro;
+     @media screen and (max-width:700px) {
+         flex-direction: column;
+     }
+     @media screen and (max-width:400px) {
+       display: none;
+    }
+}
+
+.TravelWithUs{
+font-size: large;
+}
+
+.FooterButton{
+    font-family: Poppins;
+    background-color: white;
+    color:black;
+    font-weight: 700;
+    width:130px;
+    font-size: 0.9rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding:1rem 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1.5rem;
+  
+}
+
+.ButtonHolder{
+    display: flex;
+   
+    @media screen and (min-width:700px) {
+        margin-left: auto;
+
+    }
+}
+
+.BoxPair{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media screen and (min-width:600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    color:white;
+}
+
+.p{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.a{
+    height: 40px;
+    font-size: 2rem;
+    text-align: left;
+    min-width:200px;
+    text-align: center;
+    &:hover {
+        font-weight: bold;
+        border-style: solid;
+        border-width: 2px;
+        cursor: pointer;
+       
+      }
+}
+
+.FooterImg{
+    position:absolute;
+    top:0;
+    left:0;
+   bottom:0;
+   right:0;
+  display: none;
+    z-index: 0;
+    object-fit: cover;
+}
