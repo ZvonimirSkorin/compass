@@ -36,7 +36,6 @@ const Home: NextPage = () => {
         const el = document.getElementById("SwiperMain");
         if (el !== null) {
           setCarouselHeight(el.getBoundingClientRect().height);
-          console.log("iner");
           clearInterval(interVV);
         }
       }, 200);
