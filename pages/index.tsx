@@ -49,8 +49,6 @@ const Home: NextPage = () => {
         <LetTheNumbersSpeak />
       </section>
 
-      <FeaturedTures />
-
       <div className="FilterMain">
         <section className="FilterTitle">
           <h1>Explore the world with compass</h1>
@@ -122,6 +120,7 @@ const Home: NextPage = () => {
           </article>
         </section>
       </div>
+      <FeaturedTures />
     </motion.div>
   );
 };

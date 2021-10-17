@@ -40,7 +40,7 @@ const Tour_list: React.FC = () => {
           </div>
         </section>
 
-        <section>
+        <section style={{ boxSizing: "border-box", paddingBottom: "4rem" }}>
           <div className={styles.TouresSection1Title}>
             <span>
               <h1 style={{ margin: "0.4rem" }}>Our recommendation</h1>

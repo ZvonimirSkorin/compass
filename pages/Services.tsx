@@ -4,7 +4,7 @@ import stlyesServices from "../styles/WP_CSS/Services.module.scss";
 
 const Services: React.FC = () => {
   return (
-    <motion.div animate={{ opacity: 1 }} transition={{ duration: 0.7 }} style={{ opacity: 0 }}>
+    <motion.div className={styles.AboutParentMain} animate={{ opacity: 1 }} transition={{ duration: 0.7 }} style={{ opacity: 0 }}>
       <section className={styles.AboutSec1}>
         <div style={{ marginBottom: 0 }}>
           <img className={styles.AboutLogo} alt="" src="/kompas.jpg" />

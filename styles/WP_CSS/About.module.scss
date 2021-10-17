@@ -36,7 +36,7 @@
 .SecondSectionWrapper{
     padding:3rem 1.5rem;
     margin-top: 3rem;
-    background-image: url('../../public/MountainSecondGenL.svg'), url('../../public/MountainSecondGenR.svg');
+    background-image: url('../../public/MountainSecondGenL.svg');
     background-size: contain, contain;
     background-repeat: no-repeat, no-repeat;
     
@@ -133,7 +133,20 @@ margin:0 auto;
 
 .ContactForm{
     margin-top: 3rem;
-    background: rgb(0,101,163);
-    background: linear-gradient(90deg, rgba(0,101,163,1) 0%, rgba(0,173,238,1) 76%); 
-    color:white !important;
+  padding-bottom: 4rem;
+  box-sizing: border-box;
+}
+
+.ContactParent{
+    background-image: url('../../public/MountainSecondGenR.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.AboutParentMain{
+    background-image: url('../../public/MountainSecondGenR.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

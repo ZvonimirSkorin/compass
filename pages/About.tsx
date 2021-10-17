@@ -3,7 +3,7 @@ import styles from "../styles/WP_CSS/About.module.scss";
 
 const About: React.FC = () => {
   return (
-    <motion.div style={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
+    <motion.div className={styles.AboutParentMain} style={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
       <section className={styles.AboutSec1}>
         <div style={{ marginBottom: 0 }}>
           <img className={styles.AboutLogo} alt="" src="/kompas.jpg" />
