@@ -22,7 +22,7 @@ export const HorizontalMenu: React.FC = () => {
     });
   }, []);
   return (
-    <div className={styles.HorizontalMenu} style={{ paddingBottom: "4px" }}>
+    <div className={styles.HorizontalMenu} style={{ paddingBottom: "4px", overflowX: "hidden" }}>
       {["Home", "About", "Explore", "Services", "Contact"].map((val, ind) => (
         <div
           className={styles.ItemHorizontal}

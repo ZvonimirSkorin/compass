@@ -7,41 +7,6 @@ const Footer: React.FC = () => {
   const router = useRouter();
   return (
     <footer className={styles.Footer} style={{ backgroundColor: "white" }}>
-      <div className={styles.FooterTop}>
-        <section className={styles.TravelWithUs}>
-          <h1> Travel with Kompas</h1>
-          <ul>
-            <i>
-              <FontAwesomeIcon icon={faCheck} /> <span>Experience</span>
-            </i>
-            <i style={{ marginLeft: "1rem" }}>
-              <FontAwesomeIcon icon={faCheck} /> <span>Safety</span>
-            </i>
-            <i style={{ marginLeft: "1rem" }}>
-              <FontAwesomeIcon icon={faCheck} /> <span>Quality</span>
-            </i>
-          </ul>
-        </section>
-        <div className={styles.ButtonHolder}>
-          <section
-            onClick={() => {
-              go_to("Explore");
-            }}
-            className={styles.FooterButton}
-          >
-            Toures
-          </section>
-
-          <section
-            onClick={() => {
-              go_to("Contact");
-            }}
-            className={styles.FooterButton}
-          >
-            Contact us
-          </section>
-        </div>
-      </div>
       <div className={styles.MainContainer}>
         <section className={styles.BoxPair}>
           <div style={{ color: "white" }} className={styles.p}>

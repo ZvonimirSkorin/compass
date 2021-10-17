@@ -22,10 +22,12 @@
     position: sticky;
     top:0;
     display: flex;
+    max-width: 2000px;
     align-items: center;
     font-size: 2rem;
     z-index: 20;
     color: white;
+    overflow-x:hidden;
 }
 
 

@@ -61,6 +61,7 @@ const Home: NextPage = () => {
         </section>
 
         <section style={{ maxWidth: "100%", overflow: "hidden" }} className="FilterMainSectionTwo">
+          <div className="DarknessXY"></div>
           <article className="FilterMainArticle">
             <div>
               <p>Price</p>

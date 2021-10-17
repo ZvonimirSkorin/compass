@@ -39,7 +39,7 @@ export default function CubeSwiper() {
   return (
  
     <div  onClick={()=>{scroll_down()}} style={{backgroundColor:"white",overflowX:"hidden",paddingTop:`${ref.current?ref.current.getBoundingClientRect().height:0}px`}}  className="mySwiper" id="SwiperID">
-  <section style={{position:"fixed",top:0,left:0,bottom:0,right:0,maxWidth:"1800px",
+  <section style={{position:"fixed",top:0,left:0,bottom:0,right:0,maxWidth:"2000px",
     margin:"0 auto",overflow:"hidden",maxHeight:"100%",zIndex:0}}>
         <div ref={ref} style={{position:"relative",height:"100%",width:"100%"}}>
       <FirstSide/>

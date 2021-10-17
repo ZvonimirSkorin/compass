@@ -34,7 +34,7 @@
     width:300px;
     max-width: 90%;
     border-style: solid;
-    border-color: #c9da2a;
+    border-color: $dark_blue;
   
     border-width: 1.5px;
     border-radius: 1rem;
@@ -61,8 +61,8 @@
 }
 
 .BlueButton{
-    color: $dark_blue;
-    background-color: #c9da2a;
+    color: white;
+    background-color: $light_blue;
     padding:1rem;
     width:200px;
     font-family: Source Sans Pro;
