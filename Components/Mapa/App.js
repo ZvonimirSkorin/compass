@@ -96,7 +96,6 @@ const MapChart = ({ setTooltipContent, Transport, Price,Country }) => {
         if (inOffer == null) return false;
 
         else if (lowestPrice() && transportTypeCheck()) return true;
-        console.log(lowestPrice(), transportTypeCheck())
         return false;
 
         function lowestPrice() {
@@ -105,7 +104,6 @@ const MapChart = ({ setTooltipContent, Transport, Price,Country }) => {
                 if (element.price < min)
                     min = element.price;
             })
-            console.log(min,Price)
 
             return min<=Price;
         }

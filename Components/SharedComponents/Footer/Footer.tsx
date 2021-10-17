@@ -6,7 +6,7 @@ import styles from "../../../styles/Shared_styles/Footer.module.scss";
 const Footer: React.FC = () => {
   const router = useRouter();
   return (
-    <footer className={styles.Footer}>
+    <footer className={styles.Footer} style={{ backgroundColor: "white" }}>
       <div className={styles.FooterTop}>
         <section className={styles.TravelWithUs}>
           <h1> Travel with Kompas</h1>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
       </div>
       <div className={styles.MainContainer}>
         <section className={styles.BoxPair}>
-          <p style={{ color: "white" }} className={styles.p}>
+          <div style={{ color: "white" }} className={styles.p}>
             <div
               onClick={() => {
                 go_to("About");
@@ -77,15 +77,15 @@ const Footer: React.FC = () => {
             >
               Contact
             </div>
-          </p>
-          <p style={{ color: "white" }} className={styles.p}>
+          </div>
+          <div style={{ color: "white" }} className={styles.p}>
             <h2>Kompas agency d.o.o</h2>
             <section style={{ textAlign: "center", fontSize: "1rem", color: "white" }}>Rotterdam street 123</section>
             <section style={{ textAlign: "center", fontSize: "1rem" }}>lorem@kompas.com</section>
             <section style={{ textAlign: "center", fontSize: "1rem" }}>+324 434 43 43</section>
-          </p>
+          </div>
         </section>
-        <section style={{ textAlign: "center" }}>© 2020 Kompas Nordic ApS all rights reserved.</section>
+        <section style={{ textAlign: "center" }}>© 2020 Kompas NL all rights reserved.</section>
       </div>
     </footer>
   );

@@ -1,25 +1,21 @@
-import { useWindowSize } from '@react-hook/window-size';
-import { useEffect, useRef } from 'react';
-import styles from './../../../styles/List/TitleImg.module.scss';
+import { useWindowSize } from "@react-hook/window-size";
+import { useEffect, useRef } from "react";
+import styles from "./../../../styles/List/TitleImg.module.scss";
 
-const TitleImg:React.FC<{link:string,height:Function}>= (props) =>{
-    const size = useWindowSize();
-    const ref = useRef<null | HTMLDivElement>(null)
-    useEffect(()=>{
-        
-            if(ref!==null){
-                props.height(ref.current?.getBoundingClientRect().height)
-            }
-        
-    },[size])
+const TitleImg: React.FC<{ link: string; height: Function }> = (props) => {
+  const size = useWindowSize();
+  const ref = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (ref !== null) {
+      props.height(ref.current?.getBoundingClientRect().height);
+    }
+  }, [size]);
 
-    return(
-        <div ref={ref} style={{position:"fixed"}} className={styles.TitleImgWrapper}>
-            <img alt="kompas" className={styles.TitleImg} src={props.link}/>
-        </div>
-
-    );
-
-}
+  return (
+    <div ref={ref} style={{ position: "fixed" }} className={styles.TitleImgWrapper}>
+      <img alt="kompas" className={styles.TitleImg} src={props.link} />
+    </div>
+  );
+};
 
 export default TitleImg;

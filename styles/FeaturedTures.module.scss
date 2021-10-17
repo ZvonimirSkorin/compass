@@ -7,11 +7,17 @@
 }
 .FeaturedParent{
     background-image: url('../public/SmokeBg.svg');
-    background-size: cover;
     background-position: top;
     padding-bottom: 3rem;
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 550px;
+   @media screen and (min-width:1850px) {
+       min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
 }
 
 .FeaturedTuresMain {
