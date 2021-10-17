@@ -8,6 +8,7 @@
     text-align: center;
     color: $dark_blue;
     font-family: Source Sans Pro;
+   
     
 }
 
@@ -33,9 +34,13 @@
 }
 
 .SecondSectionWrapper{
-    background-color: $dark_blue;
     padding:3rem 1.5rem;
     margin-top: 3rem;
+    background-image: url('../../public/MountainSecondGenL.svg'), url('../../public/MountainSecondGenR.svg');
+    background-size: contain, contain;
+    background-repeat: no-repeat, no-repeat;
+    
+    background-position: top left, right;
 }
 
 .Box{
