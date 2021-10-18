@@ -40,16 +40,18 @@ export default function Carousel(props) {
     useEffect(()=>{
         let inter = setInterval(()=>{
             const el = document.getElementById("SwiperMain")
-            if(el!==null) 
-        {props.set_height(el.getBoundingClientRect().height);
+            if(el!=null) 
+        {                 
+
+            props.set_height(el.getBoundingClientRect().height);
             clearInterval(inter);
         }
         },100)
             window.addEventListener('resize', ()=>{
                 let interV = setInterval(()=>{
                     const el = document.getElementById("SwiperMain")
-                    if(el!==null) 
-                {props.set_height(el.getBoundingClientRect().height);
+                    if(el!=null) 
+{                    props.set_height(el.getBoundingClientRect().height);
                     clearInterval(interV);
                 }
                 },100)
@@ -94,7 +96,14 @@ export default function Carousel(props) {
                 <div className={swiperSlideSideBoxL} />
                 <div className={swiperSlideSideBoxR} />
                 {descriptionD("Switzerland", "", activeIndex===0)}
-                <img  className={SwipPic} src={"/compassV3.jpg"} alt="Picture of the author"  />
+                <img onLoad={()=>{
+                       const el = document.getElementById("SwiperMain")
+                       if(el!=null) {
+
+                   props.set_height(el.getBoundingClientRect().height);
+                }
+                   
+                }} className={SwipPic} src={"/compassV3.jpg"} alt="Picture of the author"  />
             </SwiperSlide>
             
             <SwiperSlide style={{ width: "100vw", maxHeight: "90vh",  position: "relative" }} className={swiperSlide}>
