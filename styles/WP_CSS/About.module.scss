@@ -142,6 +142,17 @@ margin:0 auto;
     background-position: 100% 20%;
     background-repeat: no-repeat;
     background-size: fit;
+   
+    @media screen and (max-width:550px) {
+        background-position: 100% 25%;
+    
+
+    }
+    @media screen and (max-width:350px) {
+        background-position: 100% 30%;
+    
+
+    }
 }
 
 .AboutParentMain{
@@ -149,4 +160,8 @@ margin:0 auto;
     background-position: 100% 10%;
     background-repeat: no-repeat;
     background-size: fit;
+    @media screen and (max-width:500px) {
+        background-position: 100% 15%;
+
+    }
 }
