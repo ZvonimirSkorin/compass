@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
 html,
 body {
     width: 100vw;
@@ -7,8 +10,7 @@ body {
     padding: 0;
     border: 0;
     position: relative;
-    
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Nunito sans !important;    
 }
 @media screen and (min-width:2000px) {
   body{
@@ -29,9 +31,10 @@ a {
 }
 
 .smallNavBar{
-  background: rgb(0,101,163);
-  background: linear-gradient(90deg, rgba(0,101,163,1) 0%, rgba(0,173,238,1) 76%);  
+  background-color: white; 
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
+  font-size: 1rem !important;
+  color:black !important;
 }

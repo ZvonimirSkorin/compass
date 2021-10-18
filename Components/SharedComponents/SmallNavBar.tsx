@@ -15,7 +15,7 @@ const SmallNavBar: React.FC = () => {
       style={
         ["Countries", "Tour"].find((el) => el === router.pathname.split("/")[1])
           ? { display: "none" }
-          : { paddingLeft: "1rem", backgroundColor: "blue", color: "white", height: "3.6rem", zIndex: 1000, overflowX: "hidden" }
+          : { paddingLeft: "1rem", color: "white", height: "3.6rem", zIndex: 1000, overflowX: "hidden" }
       }
     >
       <ul
@@ -26,25 +26,25 @@ const SmallNavBar: React.FC = () => {
         }
       >
         <a style={{ backgroundColor: "black" }}></a>
-        <li style={width < 800 ? { marginLeft: "0rem", fontSize: "1.2rem" } : { marginLeft: "1rem" }}>
+        <li style={width < 800 ? { marginLeft: "0rem", fontSize: "1.1rem" } : { marginLeft: "1rem" }}>
           <a style={{ cursor: "pointer" }} href="tel: +496170961709">
             <FontAwesomeIcon icon={faPhone} />
             <i className="fas fa-phone"></i>
             <span style={{ marginLeft: "0.4rem" }}>{width > 800 ? "+420 234 090 170" : ""}</span>
           </a>
         </li>
-        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.2rem" } : { marginLeft: "1rem" }}>
+        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.1rem" } : { marginLeft: "1rem" }}>
           <a href="mailto: skorinzvonimir0@gmail.com">
             <FontAwesomeIcon icon={faEnvelopeOpen} />
             <span style={{ marginLeft: "0.4rem" }}> {width > 800 ? "kompas@kompas.cz" : ""}</span>
           </a>
         </li>
-        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.2rem" } : { marginLeft: "1rem" }}>
+        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.1rem" } : { marginLeft: "1rem" }}>
           <a href="https://www.facebook.com/turisticnaagencijaKOMPAS/">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </li>
-        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.2rem" } : { marginLeft: "1rem" }}>
+        <li style={width < 800 ? { marginLeft: "0.7rem", fontSize: "1.1rem" } : { marginLeft: "1rem" }}>
           <a href="https://www.instagram.com/explore/locations/1353434504727949/slovenia/ljubljana-slovenia/turisticna-agencija-kompas/?hl=hr">
             <FontAwesomeIcon icon={faInstagram} />
           </a>

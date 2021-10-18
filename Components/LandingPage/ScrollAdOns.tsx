@@ -84,7 +84,7 @@ const ScrollAdOns: React.FC<{ initiate: Function }> = (props) => {
           boxShadow: "0px 0px 15px 1px #000000",
         }}
       >
-        <FontAwesomeIcon style={{}} color="#f93154" icon={faArrowCircleUp} />
+        <FontAwesomeIcon style={{}} color="#5EA73C" icon={faArrowCircleUp} />
       </motion.div>
     </>
   );

@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       <section className={styles.LetTheNumbers} style={{ minHeight: "400px", margin: "3rem 0rem" }}>
         <LetTheNumbersSpeak />
       </section>
-
+      <FeaturedTures />
       <div className="FilterMain">
         <section className="FilterTitle">
           <h1>Explore the world with compass</h1>
@@ -59,7 +59,6 @@ const Home: NextPage = () => {
         </section>
 
         <section style={{ maxWidth: "100%", overflow: "hidden" }} className="FilterMainSectionTwo">
-          <div className="DarknessXY"></div>
           <article className="FilterMainArticle">
             <div>
               <p>Price</p>
@@ -120,7 +119,6 @@ const Home: NextPage = () => {
           </article>
         </section>
       </div>
-      <FeaturedTures />
     </motion.div>
   );
 };
