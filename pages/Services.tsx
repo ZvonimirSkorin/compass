@@ -7,7 +7,7 @@ const Services: React.FC = () => {
     <motion.div className={styles.AboutParentMain} animate={{ opacity: 1 }} transition={{ duration: 0.7 }} style={{ opacity: 0 }}>
       <section className={styles.AboutSec1}>
         <div style={{ marginBottom: 0 }}>
-          <img className={styles.AboutLogo} alt="" src="/kompas.jpg" />
+          <img className={styles.AboutLogo} alt="" src="/kompas23.jpg" />
           <h2 className={styles.Title1}>SERVICES</h2>
           <div className={styles.FirstBox}>Eat imagine you chiefly few end compas compilations. Be visitor females am inferno.</div>
         </div>
