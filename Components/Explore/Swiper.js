@@ -56,7 +56,7 @@ export default function SearchSwiper(props) {
         
         {   props.Data?.map((val,index)=>
             <SwiperSlide key={index} style={{ maxHeight: "90vh", display: "inline-block", backgroundColor: "transparent" }} className={swiperSlide}>
-            <AnimatedCard ime={val.Name} link="/compassV3.jpg" />
+            <AnimatedCard ime={val.Name} link={val.Link} />
         </SwiperSlide>
         )
             }

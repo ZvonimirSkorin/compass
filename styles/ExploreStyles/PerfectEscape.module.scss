@@ -1,0 +1,84 @@
+
+@import '../kompas_colors.scss';
+.ParentEscape{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width:1200px) {
+      
+        max-width: 1200px;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.H1{
+    color:#3A3A3A;
+    @media screen and (min-width:1200px) {
+        font-size: 2rem;
+    }
+}
+
+.Strong{
+    width:50px;
+    height: 5px;
+    border-radius: 3px;
+    margin-top: 1rem;
+    background-color: $dark_green;
+    @media screen and (max-width:1200px) {
+        margin-left: auto;
+        margin-right: auto;
+        width:80px
+
+    }
+    
+}
+
+
+.MiniCard{
+    height: 350px;
+    width:200px;
+    border-radius: 1rem;
+}
+
+.Img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.SecondSection{
+ 
+    @media screen and (min-width:1200px) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        justify-content: end;
+        
+    }
+    display: flex;
+
+    @media screen and (min-width:650px) {
+   justify-content: center;
+    }
+    gap:1rem;
+    overflow-x: auto;
+    width:100%;
+}
+
+.Flexer{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    @media screen and (min-width:1200px) {
+        margin-right: 1rem;
+        margin-left: auto;
+    }
+   
+}

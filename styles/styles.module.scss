@@ -98,6 +98,31 @@
 
     
 }
+.description2{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:5%;
+  margin:auto auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  color:white;
+    z-index:2;
+    max-width:400px;
+    word-break:break-word;
+
+    @media screen and (max-width:700px){
+        bottom:0;
+        left:0;
+        right:0;
+        justify-content:flex-end;
+    }
+
+
+
+    
+}
 
 .h1{
     box-sizing:border-box;
@@ -127,3 +152,7 @@
 }
 
 
+.GlobalButton{
+  background-color: $dark_green;
+  color:white;
+}

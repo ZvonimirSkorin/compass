@@ -5,8 +5,14 @@
 }
 
 .Title {
-    margin-left: 4rem;
+   
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(16, 25, 40);
+    @media screen and (max-width: 650px) {
+        font-size: 2rem;
+    }
    
 }

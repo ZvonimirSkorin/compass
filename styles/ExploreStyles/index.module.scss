@@ -1,7 +1,15 @@
 .ExploreWrapper{
     width:100%;
-}
+  
 
+}
+.ExploreInnerWrapper{
+    background-image: url('../../public/MountainSecondGenL.svg'), url('../../public/MountainSecondGenR.svg')
+    ,url('../../public/MountainSecondGenR.svg');
+    background-size: fit, fit;
+    background-position: left 20%, right top, right center;
+    background-repeat: no-repeat;
+}
 .search_bar_wrapper {
     width: 100%;
     box-sizing: border-box;

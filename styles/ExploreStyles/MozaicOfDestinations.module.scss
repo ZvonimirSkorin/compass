@@ -1,0 +1,149 @@
+@import '../kompas_colors.scss';
+
+.MozaicParent{
+    max-width: 1200px;
+    padding-top: 7rem;
+    box-sizing: border-box;
+    position:relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    @media screen and (min-width:1200px) {
+        margin:0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.MozaicPoster{
+    position: relative;
+    
+    @media screen and (max-width:1200px) {
+        max-width: 700px;
+        height: 600px;
+        margin:0 auto;
+    }
+    @media screen and (min-width:1200px) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        border-radius: 1rem;
+        background-color: black;
+        height: 100%;
+    }
+}
+
+.Mozaic{
+    width:100%;
+    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    
+    gap:0.5rem;
+    padding-left:1rem;
+    box-sizing: border-box;
+    grid-template-areas: 
+    "a b c"
+    "a b c"
+    "a b c"
+    "a d c"
+    "e d f"
+    "e d f"
+    "e d f"
+    "g h f"
+    "g h i"
+    "g h i"
+    ;
+
+    @media screen and (min-width:1200px) {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+    @media screen and (max-width:1200px) {
+        margin:2rem auto;
+        max-width: 700px;
+        padding-left:0rem;
+    }
+}
+
+.Img{
+    width:100%;
+    height:100%;
+    border-radius: 1rem;
+    object-fit: cover;
+
+}
+
+.MozaicChild{
+    background-color: black;
+    border-radius: 1rem;
+    position:relative;
+    
+}
+
+.MozaicChild:nth-child(1){
+    grid-area: a;
+}
+.MozaicChild:nth-child(2){
+    grid-area: b;
+}
+.MozaicChild:nth-child(3){
+    grid-area: c;
+}
+.MozaicChild:nth-child(4){
+    grid-area: d;
+}
+.MozaicChild:nth-child(5){
+    grid-area: e;
+}
+.MozaicChild:nth-child(6){
+    grid-area: f;
+}
+.MozaicChild:nth-child(7){
+    grid-area: g;
+}
+.MozaicChild:nth-child(8){
+    grid-area: h;
+}
+.MozaicChild:nth-child(9){
+    grid-area: i;
+}
+
+.Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Darkner{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    border-radius: 1rem;
+    color:white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+
+.Titles{
+    font-size: 3rem;
+}
+.Numbers{
+    font-size: 7rem;
+    color: $light_green;
+}
+
+.Button{
+    background-color: $light_green;
+    box-sizing: border-box;
+    padding:1rem;
+    color:black;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+}
